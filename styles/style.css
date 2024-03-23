@@ -1,34 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
     --primary-color: #000;
-    --sec-color-blue: #377DFF;
-    --sec-color-green: #38CB89;
-    --sec-color-orange: #FFAB00;
-    --sec-color-orange: #FFAB0066;
-    --sec-color-red: #FF5630;
-    --background-color: #FFF;
-    --neutral-card-color:  #F3F5F7;
-    --neutral-color: #6C7275;
+    --sec-color-blue: #377dff;
+    --sec-color-green: #38cb89;
+    --sec-color-orange: #ffab00;
+    --sec-color-orange: #ffab0066;
+    --sec-color-red: #ff5630;
+    --background-color: #fff;
+    --neutral-card-color: #f3f5f7;
+    --neutral-color: #6c7275;
 
     /* Typo and Fonts */
     --h1-font-size: 3rem;
     --h2-font-size: 2.8rem;
     --h3-font-size: 2.4rem;
-    --h4-font-size: 2.0rem;
+    --h4-font-size: 2rem;
     --h5-font-size: 1.6rem;
 
     /* Margins $ Bottoms */
-    --mb-4: 4.0rem;
+    --mb-4: 4rem;
     --mb-2-5: 2.5rem;
     --mb-1: 1rem;
 
     /* Paddings */
-    --pd-btn: .8rem 1.6rem;
+    --pd-btn: 0.8rem 1.6rem;
 }
-
-
-
 
 /* General Css */
 * {
@@ -37,18 +34,16 @@
     box-sizing: border-box;
 }
 
-
 html {
     font-size: 10px;
-  /* 1 rem = 10px */
+    /* 1 rem = 10px */
 }
-
 
 body {
     font-family: poppins, san serif;
     font-size: 1.6rem;
+    font-weight: 500;
 }
-
 
 a {
     text-decoration: none;
@@ -59,9 +54,9 @@ ul {
     list-style: none;
 }
 
-h1, 
+h1,
 h2 {
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
 }
 
@@ -82,12 +77,11 @@ img {
 
 /* Utilities */
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    overflow: auto;  /*getting rid of white on the navbar caused by the margin-top on H1 and H2 */
+    /* overflow: auto; getting rid of white on the navbar caused by the margin-top on H1 and H2 */
     padding: 0 4rem;
 }
-
 
 .card {
     color: var(--neutral-card-color);
@@ -102,7 +96,6 @@ img {
     display: grid;
 }
 
-
 /* Buttons and Input */
 button {
     display: inline-block;
@@ -111,7 +104,7 @@ button {
     outline: none;
     color: var(--background-color);
     background-color: var(--primary-color);
-    border-radius: .8rem;
+    border-radius: 0.8rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
@@ -123,92 +116,222 @@ button:hover {
     border: 1.5px solid var(--primary-color);
 }
 
-
 input {
     border: none;
     outline: none;
+    background-color: transparent;
 }
 
 /* TOP NAV */
-.top-nav {
-    width: 100%;
+.top__nav {
     height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     background-color: var(--neutral-card-color);
 }
 
-.top-nav .flex {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+.top__nav-icon {
+    font-size: 1.8rem;
 }
 
-.top-nav-icon {
-    margin-right: .8rem;
-}
-
-.top-nav span a{
-    margin-left: .8rem;
+.top__nav-link {
+    color: var(--sec-color-blue);
     display: inline-flex;
     align-items: center;
+    border-bottom: 2px solid var(--sec-color-blue);
+    transition: 0.3s;
+}
+
+.top__nav-link:hover {
+    color: var(--sec-color-red);
+    border-bottom: 2px solid var(--sec-color-red);
+}
+
+
+/* NAVBAR */
+.nav__container {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 2rem; */
+    padding: 3rem;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    gap: 1rem;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.nav__link {
+    transition: all 0.5s linear;
+}
+
+.nav__link:hover {
     color: var(--sec-color-blue);
-    border-bottom: 1.35px solid var(--sec-color-blue);
+}
+
+/* Active Link */
+.active-link {
+    color: var(--sec-color-blue);
+    position: relative;
+    font-weight: 600;
+}
+.active-link:before {
+    content: "";
+    position: absolute;
+    bottom: -0.65rem;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--sec-color-blue);
+    border-radius: 50%;
+}
+
+.nav__user-icons {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    /* height: 2rem; */
+}
+
+.nav__user-icons .count {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    position: absolute;
+    bottom: 60%;
+    left: 90%;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* NAV TOGGLE */
+nav .logo__img a,
+.nav__toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* PRODUCTS DROPDOWN */
+.products__dropdown {
+    background-color: var(--neutral-color);
+    padding: 1rem;
+    width: 100px;
+    height: 100%;
+    border-radius: 1rem;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.products__item {
+
+}
+
+.products__link {
+    color: var(--background-color);
+
+}
+
+/* SIGN IN */
+.signin {
+    position: fixed;
+    background-color: var(--neutral-card-color);
+    z-index: var(--z-fixed);
+    width: 420px;
+    box-shadow: -2px 0 4px hsla(0, 0%, 15%, .1);
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 5rem;
+    transition: .6s;
+}
+
+.signin__close {
+    font-size: 3.2rem;
+    color: var(--sec-color-red);
+    position: absolute;
+    top: 1.25rem;
+    right: .9rem;
+    cursor: pointer;
+}
+
+.signin__title {
+    margin: 2rem 0;
+}
+
+.signup {
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.signup a {
+    color: var(--sec-color-green);
+    font-weight: 500;
     transition: .3s;
 }
 
-.top-nav span a:hover,
-.top-nav span a:active {
-    opacity: .7;
+.signup a:hover {
+    opacity: .6;
 }
 
-/* NAVBAR */
-.nav {
+.signin__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.signin__content {
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    padding: .75rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.signin__label {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.password {
+    display: inline-flex;
+    justify-content: space-between;
     width: 100%;
-    height: 8rem;
 }
 
-.nav .flex {
+.checkbox {
+    display: flex;
+    width: 100%;
     justify-content: space-between;
-    align-items: center;
-    height: 100%;
 }
 
-.nav-logo a {
+.signin__box {
     display: flex;
-    align-items: center;
-    font-size: 1.6rem;
-    font-weight: 500;
+    width: 50pz;
 }
 
-.nav-logo h5 {
-    font-weight: 600;
-    margin-left: .3rem;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.nav-icons {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.cart-icon {
-    position: relative;
-    height: 100%;
-}
-
-.cart-icon p {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.signin__input {
+    background-color: var(--container-color);
+    width: 100%;
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+    padding: .25rem .5rem .5rem 0;
 }
