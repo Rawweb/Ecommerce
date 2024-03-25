@@ -10,6 +10,7 @@
     --background-color: #fff;
     --neutral-card-color: #f3f5f7;
     --neutral-color: #6c7275;
+    --neutral-line-color: #bbbbbb;
 
     /* Typo and Fonts */
     --h1-font-size: 3rem;
@@ -254,14 +255,15 @@ nav .logo__img a,
 /* SIGN IN */
 .signin {
     position: fixed;
-    background-color: var(--neutral-card-color);
+    background-color: var(--background-color);
     z-index: var(--z-fixed);
     width: 420px;
     box-shadow: -2px 0 4px hsla(0, 0%, 15%, .1);
     height: 100%;
     top: 0;
-    right: 0;
+    right: -100%;
     padding: 5rem;
+    z-index: 1000;
     transition: .6s;
 }
 
@@ -275,11 +277,11 @@ nav .logo__img a,
 }
 
 .signin__title {
-    margin: 2rem 0;
+    margin: 3rem 0;
 }
 
 .signup {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-weight: 300;
 }
 
@@ -296,12 +298,11 @@ nav .logo__img a,
 .signin__form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .signin__content {
     background-color: transparent;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--neutral-line-color);
     padding: .75rem 1rem;
     margin-bottom: 2rem;
 }
@@ -311,27 +312,234 @@ nav .logo__img a,
     font-weight: 300;
 }
 
-.password {
+.signin__content input {
+    width: 100%;
+    font-size: 1.6rem;
+    background-color: transparent;
+    padding: 1.25rem 1.5rem 1.5rem 0;
+}
+
+.signin__contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.remember__me {
     display: inline-flex;
-    justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    gap: .5rem;
 }
 
-.checkbox {
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* input[type="checkbox"]:checked {
+    accent-color: var(--sec-color-green);
+} */
+
+.signin__form .signin__btn {
+    margin-top: 2rem;
+}
+
+.signin__label-password {
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.signin__label-password:hover {
+    opacity: .7;
+}
+
+/* SSHOW SIGNIN */
+.show-signin {
+    right: 0;
+}
+
+/* CART */
+.cart {
+    position: fixed;
+    background-color: var(--background-color);
+    z-index: var(--z-fixed);
+    width: 420px;
+    box-shadow: -2px 0 4px hsla(0, 0%, 15%, .1);
+    height: 100%;
+    top: 0;
+    right: -100%;
+    padding: 5rem;
+    transition: .6s;
+    overflow: scroll;
+    z-index: 1000;
+}
+
+.cart__close {
+    font-size: 3.2rem;
+    color: var(--sec-color-red);
+    position: absolute;
+    top: 1.25rem;
+    right: .9rem;
+    cursor: pointer;
+}
+
+.cart__title {
+    margin: 3rem 0;
+}
+
+.cart__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart__content {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1.5px solid var(--neutral-line-color);
 }
 
-.signin__box {
+.cart__img {
+    background-color: var(--neutral-card-color);
+    border-radius: 1rem;
+    box-shadow: -2px 0 4px hsla(0, 0%, 15%, .1);
+}
+
+.cart__img img{
+    width: 100px;
+}
+
+.cart__label {
     display: flex;
-    width: 50pz;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 
-.signin__input {
-    background-color: var(--container-color);
-    width: 100%;
-    color: var(--title-color);
-    font-size: var(--normal-font-size);
-    padding: .25rem .5rem .5rem 0;
+.label__holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
 }
+
+.label__title,
+.label__amount {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.label__discription,
+.label__delete {
+    font-size: 1.4rem;
+    color: var(--neutral-color);
+}
+
+.label__delete {
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.label__count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem  1rem;
+    border: 1.2px solid var(--neutral-line-color);
+    border-radius: .5rem;
+    width: 50%;
+}
+
+#plus,
+#minus {
+    cursor: pointer;
+    background-color: var(--neutral-card-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.cart__footer {
+    margin-top: 4rem;
+}
+
+.footer__total {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.total__holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.subtotal {
+    font-size: 1.4rem;
+    color: var(--neutral-color);
+}
+
+.subtotal__amount,
+.total__title,
+.total__amount {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.total__title,
+.total__amount {
+    font-size: 1.8rem;
+}
+
+.checkout__btn {
+    margin-top: 2rem;
+}
+
+
+.checkout__btn a {
+    color: var(--background-color);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.checkout__btn a:hover {
+    color: var(--primary-color);
+}
+
+.view__cart-link {
+    text-align: center;
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+    transition: .5s;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.view__cart-link:hover {
+    color: var(--sec-color-blue);
+}
+
+/* SSHOW CART */
+.show-cart {
+    right: 0;
+}
+
+/* SWIPER */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: var(--neutral-card-color);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    color: black;
+    font-size: .8rem;
+}
+
+
