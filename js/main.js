@@ -1,31 +1,45 @@
-// SLIDENAV
-function slideNav() {
-    const nav = document.querySelector(".slider");
-    const navWidth = nav.offsetWidth;
-    let currentPosition = 0;
-    const direction = 1; // 1 for right, -1 for left
-    const speed = 1; // Adjust speed as needed
+// // SLIDENAV
+// function slideNav() {
+//     const nav = document.querySelector(".slider");
+//     const navWidth = nav.offsetWidth;
+//     let currentPosition = 0;
+//     const direction = 1; // 1 for right, -1 for left
+//     const speed = 1; // Adjust speed as needed
 
-    //     // Duplicate the slider content
-    // nav.innerHTML += nav.innerHTML;
+//     //     // Duplicate the slider content
+//     // nav.innerHTML += nav.innerHTML;
 
-    function animate() {
-        currentPosition += direction * speed;
-        // Reset position just before the slider moves out of view
-        if (currentPosition > window.innerWidth - navWidth) {
-            currentPosition = -navWidth;
-        } else if (currentPosition < -navWidth + 1) {
-            currentPosition = window.innerWidth - navWidth;
-        }
-        nav.style.transform = "translateX(" + currentPosition + "px)";
-        requestAnimationFrame(animate);
-    }
+//     function animate() {
+//         currentPosition += direction * speed;
+//         // Reset position just before the slider moves out of view
+//         if (currentPosition > window.innerWidth - navWidth) {
+//             currentPosition = -navWidth;
+//         } else if (currentPosition < -navWidth + 1) {
+//             currentPosition = window.innerWidth - navWidth;
+//         }
+//         nav.style.transform = "translateX(" + currentPosition + "px)";
+//         requestAnimationFrame(animate);
+//     }
 
-    animate();
-}
+//     animate();
+// }
 
-// Call the function when the page is loaded
-window.onload = slideNav;
+// // Call the function when the page is loaded
+// window.onload = slideNav;
+
+// MOVILE NAV
+const navToggle = document.querySelector(".nav__toggle");
+const mobileNav = document.querySelector(".mobile__container");
+const mobileClose = document.querySelector(".mobile__close");
+
+navToggle.addEventListener("click", () => {
+    console.log("navToggle");
+    mobileNav.classList.add("show-mobile");
+});
+
+mobileClose.addEventListener("click", () => {
+    mobileNav.classList.remove("show-mobile");
+});
 
 // SIGNIN OPEN
 const signInOpen = document.getElementById("signin-open");
@@ -156,7 +170,7 @@ var heroSwiper = new Swiper(".hero-swiper", {
         delay: 2500,
         disableOnInteraction: false,
     },
-    speed: 2000,
+    speed: 1000,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -165,7 +179,7 @@ var heroSwiper = new Swiper(".hero-swiper", {
 
 // NEW ARRIVALS SWIPER
 var newSwiper = new Swiper(".new-swiper", {
-    spaceBetween: 16,
+    spaceBetween: 15,
     centeredSlides: true,
     slidesPerView: "auto",
     loop: true,
