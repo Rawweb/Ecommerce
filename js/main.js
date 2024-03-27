@@ -150,13 +150,28 @@ updateCartAmounts();
 // HERO SWIPER
 var heroSwiper = new Swiper(".hero-swiper", {
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-        clickable: true,
+    grabCursor: true,
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
+    speed: 2000,
     navigation: {
-        nextEl: ".next-slide",
-        prevEl: ".prev-slide",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+// NEW ARRIVALS SWIPER
+var newSwiper = new Swiper(".new-swiper", {
+    spaceBetween: 16,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
 });
