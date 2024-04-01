@@ -1,39 +1,38 @@
-// // SLIDENAV
-// function slideNav() {
-//     const nav = document.querySelector(".slider");
-//     const navWidth = nav.offsetWidth;
-//     let currentPosition = 0;
-//     const direction = 1; // 1 for right, -1 for left
-//     const speed = 1; // Adjust speed as needed
+// SLIDENAV
+function slideNav() {
+    const nav = document.querySelector(".slider");
+    const navWidth = nav.offsetWidth;
+    let currentPosition = 0;
+    const direction = 1; // 1 for right, -1 for left
+    const speed = 1; // Adjust speed as needed
 
-//     //     // Duplicate the slider content
-//     // nav.innerHTML += nav.innerHTML;
+    //     // Duplicate the slider content
+    // nav.innerHTML += nav.innerHTML;
 
-//     function animate() {
-//         currentPosition += direction * speed;
-//         // Reset position just before the slider moves out of view
-//         if (currentPosition > window.innerWidth - navWidth) {
-//             currentPosition = -navWidth;
-//         } else if (currentPosition < -navWidth + 1) {
-//             currentPosition = window.innerWidth - navWidth;
-//         }
-//         nav.style.transform = "translateX(" + currentPosition + "px)";
-//         requestAnimationFrame(animate);
-//     }
+    function animate() {
+        currentPosition += direction * speed;
+        // Reset position just before the slider moves out of view
+        if (currentPosition > window.innerWidth - navWidth) {
+            currentPosition = -navWidth;
+        } else if (currentPosition < -navWidth + 1) {
+            currentPosition = window.innerWidth - navWidth;
+        }
+        nav.style.transform = "translateX(" + currentPosition + "px)";
+        requestAnimationFrame(animate);
+    }
 
-//     animate();
-// }
+    animate();
+}
 
-// // Call the function when the page is loaded
-// window.onload = slideNav;
+// Call the function when the page is loaded
+window.onload = slideNav;
 
-// MOVILE NAV
-const navToggle = document.querySelector(".nav__toggle");
-const mobileNav = document.querySelector(".mobile__container");
-const mobileClose = document.querySelector(".mobile__close");
+// MOBILE NAV
+const mobileNav = document.getElementById("mobile-nav");
+const toggleIcon = document.getElementById("toggle-icon");
+const mobileClose = document.getElementById("mobile-close");
 
-navToggle.addEventListener("click", () => {
-    console.log("navToggle");
+toggleIcon.addEventListener("click", () => {
     mobileNav.classList.add("show-mobile");
 });
 
@@ -41,12 +40,37 @@ mobileClose.addEventListener("click", () => {
     mobileNav.classList.remove("show-mobile");
 });
 
+// SEARCH BAR
+const inputBox = document.querySelector(".input__box");
+const searchIcon = document.getElementById("search-icon");
+const navBar = document.querySelector(".nav");
+
+searchIcon.addEventListener("click", () => {
+    inputBox.classList.toggle("show-input");
+
+    // if (navBar.classList.contains('container')) {
+    //     searchIcon.classList.add('bx-x');
+    // } else {
+    //     searchIcon.classList.replace("bx-x", 'bx-search');
+    // }
+});
+
+// SCROLL HEADER
+function scrollHeader() {
+    const header = document.getElementById("header");
+    // when the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+    if (this.scrollY >= 50) header.classList.add("scroll-header");
+    else header.classList.remove("scroll-header");
+}
+
+window.addEventListener("scroll", scrollHeader);
+
 // SIGNIN OPEN
-const signInOpen = document.getElementById("signin-open");
+const signInIcon = document.getElementById("user-icon");
 const signIn = document.getElementById("signin");
 const signInClose = document.getElementById("signin-close");
 
-signInOpen.addEventListener("click", () => {
+signInIcon.addEventListener("click", () => {
     signIn.classList.add("show-signin");
 });
 
@@ -55,11 +79,11 @@ signInClose.addEventListener("click", () => {
 });
 
 // CART OPEN
-const cartOpen = document.getElementById("cart-open");
+const cartIcon = document.getElementById("cart-icon");
 const cart = document.getElementById("cart");
 const cartClose = document.getElementById("cart-close");
 
-cartOpen.addEventListener("click", () => {
+cartIcon.addEventListener("click", () => {
     cart.classList.add("show-cart");
 });
 
@@ -189,3 +213,13 @@ var newSwiper = new Swiper(".new-swiper", {
         disableOnInteraction: false,
     },
 });
+
+// SHOW SCROLLUP
+function scrollUp() {
+    const scrollUp = document.getElementById("scroll-up");
+    //when the scroll is higher than 350 viewport height, add the show-scroll class
+    if (this.scrollY >= 350) scrollUp.classList.add("show-scroll");
+    else scrollUp.classList.remove("show-scroll");
+}
+
+window.addEventListener("scroll", scrollUp);

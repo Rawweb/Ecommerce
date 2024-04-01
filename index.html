@@ -12,7 +12,7 @@
     </head>
     <body>
         <!-- HEADER -->
-        <header class="header">
+        <header class="header" id="header">
             <!-- TOP NAV -->
             <div class="top__nav">
                 <div class="slider top__nav">
@@ -23,136 +23,135 @@
             </div>
 
             <!-- NAVBAR -->
-            <nav class="nav__bar container" id="nav__bar">
-                <div class="nav__container">
-                    <div class="nav__logo">
-                        <!-- Nav Toggle -->
-                        <div class="nav__toggle">
-                            <i class='bx bx-menu'></i>
+            <nav class="nav container" id="nav">
+                <div class="nav__logo">
+                    <i class='bx bx-menu' id="toggle-icon"></i>
+                    <a href="index.html" class="logo"><i class='bx bxl-shopify'></i>
+                    <span class="logo__name">Rawfile</span></a>
+                </div>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link active-link">Home</a>
+                        </li>
+
+                        <li class="nav__item dropdown__menu">
+                            <div class="nav__link">
+                                Products <i class='bx bx-chevron-down dropdown__arrow'></i>
+
+                                <div class="dropdown__data">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item"><a href="#" class="dropdown__link">Home</a></li>
+                                    </ul>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item"><a href="#" class="dropdown__link">Product</a></li>
+                                    </ul>
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item"><a href="#" class="dropdown__link">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Shop</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav__icon">
+                    <div class="search__box" id="search-box">
+                        <i class='bx bx-search' id="search-icon"></i>
+                        <div class="input__box">
+                            <input type="text" placeholder="Search...">
                         </div>
-                        <!--Nav Logo -->
-                        <div class="logo__img">
-                            <a href="index.html" class="logo__link" ><i class='bx bxl-shopify'></i><span>Rawfile</span></a>
-                        </div>
                     </div>
-                    <!-- Nav Menu -->
-                    <div class="nav__menu">
-                        <ul class="nav__list">
-                            <li class="nav__item">
-                                <a href="index.html" class="nav__link active-link">Home</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="shop.html" class="nav__link">Shop</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="products.html" class="nav__link">Products<i class='bx bx-chevron-down'></i>
-                                </a>
-                                <ul class="products__dropdown">
-                                    <li class="products__item">
-                                        <a href="#" class="products__link">Second</a>
-                                    </li>
-                                    <li class="products__item">
-                                        <a href="#" class="products__link">Third</a>
-                                    </li>
-                                    <li class="products__item">
-                                        <a href="#" class="products__link">Fourth</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav__item">
-                                <a href="contact.html" class="nav__link">Sign Up</a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Nav User Buttons -->
-                    <div class="nav__user-icons">
-                        <a href="#" class="nav__user-btns" ><i class='bx bx-search'></i></a>
-                        <a href="#" class="nav__user-btns" id="signin-open" ><i class='bx bx-user-circle'></i></a>
-                        <a href="#" class="nav__user-btns" id="cart-open" ><i class='bx bx-cart'></i>
-                            <span class="count">2</span>
-                        </a>
-                    </div>
+                    <i class='bx bx-user-circle' id="user-icon"></i>
+                    <i class='bx bx-cart-alt' id="cart-icon"></i>
+                    <span class="cart__count">0</span>
                 </div>
             </nav>
         </header>
 
         <!-- MOBILE NAV -->
         <nav class="mobile__nav container" id="mobile-nav">
-                <div class="mobile__container">
-                    <div class="mobile__logo">
-                        <!--Nav Logo -->
-                        <div class="logo__img">
-                            <a href="index.html" class="logo__link" ><i class='bx bxl-shopify'></i><span>Rawfile</span></a>
-                        </div>
-                        <!-- Nav Close -->
-                        <div class="mobile__close" id="mobile-close">
-                            <i class="bx bx-x"></i>
-                        </div>
-                    </div>
-                    <!-- Nav Menu -->
-                    <div class="mobile__menu">
-                        <ul class="mobile__list">
-                            <li class="mobile__item">
-                                <a href="index.html" class="nav__link mobile__active-link">Home</a>
-                            </li>
-                            <li class="mobile__item">
-                                <a href="shop.html" class="nav__link prod">Shop
-                                    <span class="chevron__down"><i class='bx bx-chevron-down'></i></span>
-                                </a>
-                            </li>
-                            <li class="mobile__item">
-                                <a href="products.html" class="nav__link prod">Products
-                                    <span class="chevron__down"><i class='bx bx-chevron-down'></i></span>
-                                </a>
-                                <ul class="products__dropdown">
-                                    <li class="products__item">
-                                        <a href="#" class="products__link">Second</a>
-                                    </li>
-                                    <li class="products__item">
-                                        <a href="#" class="products__link">Third</a>
-                                    </li>
-                                    <li class="products__item">
-                                        <a href="#" class="products__link">Fourth</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="mobile__item">
-                                <a href="contact.html" class="nav__link">Sign Up</a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Nav User Buttons -->
-                    <div class="mobile__user-icons">
-                        <div class="mobile__user-holder">
-                            <div class="holder__name">
-                                Wishlist
-                            </div>
-                            <a href="#" class="mobile__user-btns" id="signin__open"><i class='bx bx-heart'></i>
-                            <span class="count">2</span></a>
-                        </div>
-                        <div class="mobile__user-holder">
-                            <div class="holder__name">
-                                Cart
-                            </div>
-                            <a href="#" class="mobile__user-btns" id="cart__open" ><i class='bx bx-cart'></i>
-                            <span class="count">2</span>
-                        </a>
-                        </div>
-                        <div class="mobile__btn">
-                            <button class="btn">Add to Cart</button>
-                        </div>
+            <div class="mobile__container">
+                <div class="mobile__nav-logo">
+                    <a href="index.html" class="mobile__logo"><i class='bx bxl-shopify'></i>
+                    <span class="logo__name">Rawfile</span></a>
 
-                        <div class="mobile__socials">
-                            <i class='bx bxl-instagram'></i>
-                            <i class='bx bxl-facebook'></i>
-                            <i class='bx bxl-youtube'></i>
-                        </div>
+                    <div class="mobile__close" id="mobile-close">
+                        <i class="bx bx-x"></i>
                     </div>
                 </div>
-            </nav>
 
+                <div class="mobile__nav-menu">
+                    <ul class="mobile__nav-list">
+                        <li class="mobile__nav-item">
+                            <a href="index.html" class="mobile__nav-link mobile__active-link">Home</a>
+                        </li>
+
+                        <li class="mobile__nav-item mobile__dropdown-menu">
+                            <div class="mobile__nav-link prod">
+                                Products <i class='bx bx-chevron-down mobile__dropdown-arrow'></i>
+
+                                <div class="mobile__dropdown-data">
+                                    <ul class="mobile__dropdown-list">
+                                        <li class="mobile__dropdown-item"><a href="#" class="mobile__dropdown-link">Home</a></li>
+                                    </ul>
+                                    <ul class="mobile__dropdown-list">
+                                        <li class="mobile__dropdown-item"><a href="#" class="mobile__dropdown-link">Product</a></li>
+                                    </ul>
+                                    <ul class="mobile__dropdown-list">
+                                        <li class="mobile__dropdown-item"><a href="#" class="mobile__dropdown-link">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="mobile__nav-item">
+                            <a href="index.html" class="mobile__nav-link">Shop</a>
+                        </li>
+
+                        <li class="mobile__nav-item">
+                            <a href="index.html" class="mobile__nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mobile__user-icons">
+                <div class="mobile__user-holder">
+                    <div class="holder__name">
+                        Wishlist
+                    </div>
+                    <a href="#" class="mobile__user-btns" id="signin__open"><i class='bx bx-heart'></i>
+                    <span class="count">2</span></a>
+                </div>
+                <div class="mobile__user-holder">
+                    <div class="holder__name">
+                        Cart
+                    </div>
+                    <a href="#" class="mobile__user-btns" id="cart__open" ><i class='bx bx-cart'></i>
+                        <span class="count">2</span>
+                    </a>
+                    </div>
+                    <div class="mobile__btn">
+                        <button class="btn">Add to Cart</button>
+                    </div>
+
+                <div class="mobile__socials">
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-youtube'></i>
+                </div>
+            </div>    
+        </nav>
 
         <!-- LOGIN -->
         <div class="signin" id="signin">
@@ -574,6 +573,42 @@
             </div>
         </section>
 
+        <!-- CATEGORY SECTION -->
+        <section class="category">
+            <div class="container category__container">
+                <div class="category-card">
+                    <!-- Card 1 -->
+                    <div class="category__card">
+                        <i class='bx bx-car'></i>
+                        <h3 class="category__title">Free Shipping</h3>
+                        <h4 class="category__info">Order above $200</h4>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="category__card">
+                        <i class='bx bx-credit-card-front'></i>
+                        <h3 class="category__title">Money-back</h3>
+                        <h4 class="category__info">30 days guarantee</h4>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <!-- Card 3 -->
+                    <div class="category__card">
+                        <i class='bx bx-lock'></i>
+                        <h3 class="category__title">Secure Payments</h3>
+                        <h4 class="category__info">Secured by Stripe</h4>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="category__card">
+                        <i class='bx bx-phone'></i>
+                        <h3 class="category__title">24/7 Support</h3>
+                        <h4 class="category__info">Phone and Email support</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ADS SECTION -->
         <section class="ads">
             <div class="ads__container">
@@ -683,6 +718,9 @@
                 </div>
             </div>
         </footer>
+
+        <!-- SCROLL UP -->
+        <a href="#" class="scrollup" id="scroll-up"><i class="bx bx-up-arrow-alt scrollup__icon"></i></a>
 
         <!-- Swiper JS -->
         <script src="./js/swiper-bundle.min.js"></script>
