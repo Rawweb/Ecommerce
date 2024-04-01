@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --primary-color: #000;
+    --sec-color-blue: #377dff;
+    --sec-color-green: #38cb89;
+    --sec-color-yellow: #ffab00;
+    --sec-color-orange: #ffab0066;
+    --sec-color-red: #ff5630;
+    --background-color: #fff;
+    --neutral-card-color: #f3f5f7;
+    --neutral-color: #6c7275;
+    --neutral-line-color: #bbbbbb;
+    --shadow: hsla(0, 0%, 15%, 0.1);
+    --font-family: "poppins", sans-serif;
+    --scroll-bar-color: hsl(250, 12%, 90%);
+    --scroll-thumb-color: hsl(250, 12%, 60%);
+
+
+    /* Typo and Fonts */
+    --h1-font-size: 3rem;
+    --h2-font-size: 2.8rem;
+    --h3-font-size: 2.4rem;
+    --h4-font-size: 2rem;
+    --h5-font-size: 1.6rem;
+
+    /* Margins $ Bottoms */
+    --mb-4: 4rem;
+    --mb-2-5: 2.5rem;
+    --mb-1: 1rem;
+
+    /* Paddings */
+    --pd-btn: 1.3rem 1.6rem;
+}
+
+/* General Css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    /* 1 rem = 10px */
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h3,
+h4,
+h5 {
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+img {
+    width: 100%;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* overflow: auto; getting rid of white on the navbar caused by the margin-top on H1 and H2 */
+    padding: 0 4rem;
+}
+
+/* .card {
+    color: var(--neutral-card-color);
+    padding: 2rem;
+} */
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* Buttons and Input */
+button {
+    display: inline-block;
+    padding: var(--pd-btn);
+    border: none;
+    outline: none;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    font-weight: 500;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 1.5px solid var(--primary-color);
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}

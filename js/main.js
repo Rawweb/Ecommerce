@@ -202,17 +202,30 @@ var heroSwiper = new Swiper(".hero-swiper", {
 });
 
 // NEW ARRIVALS SWIPER
-var newSwiper = new Swiper(".new-swiper", {
+var swiper = new Swiper(".my-swiper", {
+    slidesPerView: 1,
     spaceBetween: 15,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    loop: true,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+    },
 
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        },
     },
 });
+
 
 // SHOW SCROLLUP
 function scrollUp() {
@@ -223,3 +236,28 @@ function scrollUp() {
 }
 
 window.addEventListener("scroll", scrollUp);
+
+// MUSIC ARRIVAL SWIPER
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+    },
+
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        },
+    },
+});
