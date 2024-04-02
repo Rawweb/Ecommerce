@@ -205,6 +205,7 @@ var heroSwiper = new Swiper(".hero-swiper", {
 var swiper = new Swiper(".my-swiper", {
     slidesPerView: 1,
     spaceBetween: 15,
+    grabCursor: true,
     scrollbar: {
         el: ".swiper-scrollbar",
         hide: true,
@@ -237,10 +238,47 @@ function scrollUp() {
 
 window.addEventListener("scroll", scrollUp);
 
+// MUSIC JS
+
+// LOGO SWIPER
+var swiper = new Swiper(".logo-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    loop: true,
+    grabCursor: true,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+    },
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    speed: 1000,
+
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        },
+    },
+});
+
+
 // MUSIC ARRIVAL SWIPER
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 15,
+    grabCursor: true,
     scrollbar: {
         el: ".swiper-scrollbar",
         hide: true,

@@ -1719,6 +1719,12 @@ input[type="checkbox"] {
     }
 }
 
+@media screen and (max-width: 347px) {
+    .ads__content {
+        padding: 2rem;
+    }
+}
+
 @media screen and (max-width: 320px) {
     /* SIMPLY SECTION */
     .simply__container {

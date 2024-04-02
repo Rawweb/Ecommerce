@@ -116,7 +116,6 @@
 
 /* LOGO SECTION */
 .logo__container {
-    margin-bottom: 3rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -124,7 +123,7 @@
 }
 
 .logo__container img {
-    width: 150px;
+    width: 200px;
     opacity: 0.6;
     transition: 0.5s;
 }
@@ -135,7 +134,7 @@
 
 /* NEW ARRIVALS */
 .new_arrivals {
-    margin-top: 10rem;
+    margin-top: 1rem;
     margin-bottom: 3rem;
 }
 
@@ -264,6 +263,10 @@
 }
 
 /* COLLECTION SECTIOBN */
+.showcase {
+    margin-bottom: 6rem;
+}
+
 .showcase__img-container {
     display: flex;
 }
@@ -321,6 +324,11 @@
 
 .counter_details {
     font-size: 1.2rem;
+}
+
+/* CATEGORY SECTION */
+.category__card:hover {
+    background-color: var(--sec-color-yellow);
 }
 
 /* NEWSFEED SECTION */
@@ -403,6 +411,142 @@
 ::-webkit-scrollbar-thumb {
     background-color: var(--sec-color-yellow);
     border-radius: 0.5rem;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1200px) {
+    .hero-container {
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-container {
+        justify-content: center;
+        gap: 10rem;
+    }
+    .hero__title {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero__info {
+        margin-bottom: 1.5rem;
+    }
+
+    .new_arrivals-title {
+        font-size: 2rem;
+    }
+
+    .card_title {
+        font-size: 1.4rem;
+    }
+
+    .card_price {
+        font-size: 1.2rem;
+    }
+
+    .card_stars {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    .hero-container {
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .hero__img {
+        order: 2;
+        width: 100%;
+    }
+
+    .hero__text {
+        order: 1;
+        width: 100%;
+    }
+
+    .hero__title {
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero__img {
+        width: 100%;
+    }
+
+    .hero__text {
+        width: 80%;
+    }
+
+    .hero__title {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .hero__info {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 347px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__info {
+        font-size: 1.3rem;
+    }
+
+    .ads__content {
+        width: 80%;
+        padding: 0 auto;
+    }
+
+    .counter_cards {
+        margin: 1rem 0;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .counter_num {
+        height: 40px;
+        width: 40px;
+        background-color: var(--background-color);
+        font-weight: 600;
+        font-size: 1.5rem;
+        padding: .7rem .7rem .1rem .7rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        box-shadow: 2px 3px 5px var(--shadow);
+    }
+
+    .counter_card {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .counter_details {
+    font-size: 1rem;
+}
 }
 
 
