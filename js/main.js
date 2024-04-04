@@ -227,7 +227,6 @@ var swiper = new Swiper(".my-swiper", {
     },
 });
 
-
 // SHOW SCROLLUP
 function scrollUp() {
     const scrollUp = document.getElementById("scroll-up");
@@ -273,7 +272,6 @@ var swiper = new Swiper(".logo-swiper", {
     },
 });
 
-
 // MUSIC ARRIVAL SWIPER
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -299,3 +297,100 @@ var swiper = new Swiper(".mySwiper", {
         },
     },
 });
+
+// COUNTDOWN
+// Select the classes
+const counterCards = document.querySelector(".counter_cards");
+const items = document.querySelectorAll(".counter_card h3");
+
+// Set the date we're counting down to
+let futureDate = new Date("Apr 7, 2024 20:51:25");
+
+const year = futureDate.getFullYear();
+const hours = futureDate.getHours();
+const minutes = futureDate.getMinutes();
+const month = futureDate.getMonth();
+const date = futureDate.getDate();
+
+// future time in Milliseconds
+const futureTime = futureDate.getTime();
+
+function getRemainingTime() {
+    const today = new Date().getTime();
+    const t = futureTime - today;
+    // 1s  = 1000ms
+    // 1m = 60s
+    // 1hr = 60min
+    // 1d = 24hrs
+
+    // Values in Milliseconds
+    const oneDay = 24 * 60 * 60 * 1000;
+    const oneHour = 60 * 60 * 1000;
+    const oneMinute = 60 * 1000;
+
+    // calculate all values
+    let days = t / oneDay;
+    days = Math.floor(days);
+
+    let hours = Math.floor((t % oneDay) / oneHour);
+    let minutes = Math.floor((t % oneHour) / oneMinute);
+    let seconds = Math.floor((t % oneMinute) / 1000);
+
+    // set values array
+    const values = [days, hours, minutes, seconds];
+
+    function format(item) {
+        if (item < 10) {
+            return (item = `0${item}`);
+        }
+
+        return item;
+    }
+
+    // Iterate over my items
+    items.forEach(function (item, index) {
+        item.innerHTML = format(values[index]);
+    });
+
+    // CLear Intervals 
+    if(t<0) {
+        clearInterval(countdown);
+        counterCards.innerHTML = `<h3 class="expired">Sorry this giveaway has expired</h3>`
+    }
+}
+
+// Countdown
+let countdown = setInterval(getRemainingTime, 1000);
+
+getRemainingTime();
+
+// // Set the date we're counting down to
+// var countDownDate = new Date("Apr 3, 2024 15:37:25").getTime();
+
+// // Update the count down every 1 second
+// var x = setInterval(function() {
+
+//     // Get today's date and time
+//     var now = new Date().getTime();
+
+//     // Find the distance between now and the count down date
+//     var distance = countDownDate - now;
+
+//     // Time calculations for days, hours, minutes and seconds
+//     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+//     // Display the result in the elements with class="counter_num"
+//     document.querySelector(".days").innerHTML = days;
+//     document.querySelector(".hours").innerHTML = hours;
+//     document.querySelector(".minutes").innerHTML = minutes;
+//     document.querySelector(".seconds").innerHTML = seconds;
+
+//     // If the count down is finished, write some text
+//     if (distance < 0) {
+//         clearInterval(x);
+//         document.querySelector(".counter_info").innerHTML = "EXPIRED";
+//     }
+// }, 1000);
