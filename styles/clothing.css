@@ -1,0 +1,231 @@
+:root {
+    --primary-color: #000;
+    --sec-color-blue: #377dff;
+    --sec-color-green: #38cb89;
+    --sec-color-yellow: #ffab00;
+    --sec-color-orange: #ffab0066;
+    --sec-color-red: #ff5630;
+    --background-color: #fff;
+    --neutral-card-color: #f3f5f7;
+    --neutral-color: #6c7275;
+    --neutral-line-color: #bbbbbb;
+    --shadow: hsla(0, 0%, 15%, 0.1);
+    --font-family: "poppins", sans-serif;
+    --scroll-bar-color: hsl(250, 12%, 90%);
+    --scroll-thumb-color: hsl(250, 12%, 60%);
+
+    /* Typo and Fonts */
+    --h1-font-size: 3rem;
+    --h2-font-size: 2.8rem;
+    --h3-font-size: 2.4rem;
+    --h4-font-size: 2rem;
+    --h5-font-size: 1.6rem;
+
+    /* Margins $ Bottoms */
+    --mb-4: 4rem;
+    --mb-2-5: 2.5rem;
+    --mb-1: 1rem;
+
+    /* Paddings */
+    --pd-btn: 1.3rem 1.6rem;
+}
+
+/* TOP NAV */
+.top__nav {
+    background-color: var(--sec-color-blue);
+    color: var(--background-color);
+}
+
+.top__nav-link {
+    color: var(--background-color);
+    border-bottom: 2px solid var(--background-color);
+}
+
+.top__nav-link:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* NAVBAR */
+.nav__link:hover {
+    color: var(--sec-color-blue);
+    cursor: pointer;
+}
+
+.active-link {
+    color: var(--sec-color-blue);
+    position: relative;
+    font-weight: 600;
+}
+.active-link:before {
+    content: "";
+    position: absolute;
+    bottom: -0.65rem;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--sec-color-blue);
+    border-radius: 50%;
+}
+
+.dropdown__link:hover {
+    color: var(--sec-color-blue);
+}
+
+/* SEARCH BOX NAV */
+.nav__icon .search__box .input__box {
+    background-color: var(--sec-color-blue);
+}
+
+.nav__icon .search__box .input__box:before {
+    background-color: var(--sec-color-blue);
+}
+
+/* MOBILE NAV */
+.mobile__nav-link:hover,
+.holder__name:hover {
+    color: var(--sec-color-blue);
+}
+
+
+.mobile__dropdown-link:hover {
+    color: var(--sec-color-blue);
+}
+
+/* HERO SECTION */
+.ads__container {
+    padding-top: 10.5rem;
+    background-color: #171D28;
+}
+
+.ads__title {
+    font-size: 7rem;
+    line-height: 1;
+}
+
+.ads__info {
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+.hero_btn {
+    margin-top: 2rem;
+    background-color: var(--sec-color-blue);
+    color: var(--background-color);
+    transition: 0.5s;
+}
+
+/* JUST IN */
+.card_img {
+    margin: 0 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.card_top {
+    background-color: var(--background-color)
+}
+
+.card_btn {
+    opacity: .7;
+}
+
+.card_btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    opacity: 1;
+}
+
+/* ADS SECTTION */
+.ads_container {
+    background-color: var(--neutral-card-color);
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+    margin-bottom: 3rem;
+}
+
+.ads_img {
+    width: 50%;
+}
+
+.ads_subheading {
+    color: var(--sec-color-blue);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.ads_title {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ads_info {
+    font-weight: 500;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+}
+
+.ads_content .top__nav-link {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    transition: 0.3s;
+}
+
+.ads_content .top__nav-link:hover {
+    color: var(--sec-color-blue);
+    border-bottom: 2px solid var(--sec-color-blue);
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1200px){
+    .ads__title {
+        font-size: 5rem;
+    }
+} 
+
+
+@media screen and (max-width: 992px) {
+    /* HERO */
+    .ads__container {
+        gap: 4rem;
+    }
+
+    .ads__title {
+        font-size: 3.5rem;
+    }
+
+    .ads__subheading {
+        font-size: 1.4rem;
+    }
+
+    .ads__info {
+        font-size: 1.4rem;
+    }
+
+    .ads__content a {
+        font-size: 1.2rem;
+    }
+
+     /* ADS SECTION */
+    .ads__container {
+        gap: 4rem;
+    }
+
+    .ads_titl {
+        font-size: 3rem;
+    }
+
+    .ads_subheading {
+        font-size: 1.4rem;
+    }
+
+    .ads_info {
+        font-size: 1.4rem;
+    }
+
+    .ads_content a {
+        font-size: 1.2rem;
+    }
+}

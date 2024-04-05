@@ -70,6 +70,10 @@
     cursor: pointer;
 }
 
+.dropdown__link:hover {
+    color: var(--sec-color-yellow);
+}
+
 
 .active-link {
     color: var(--background-color);
@@ -94,6 +98,17 @@
 
 .nav__icon .search__box .input__box:before {
     background-color: var(--sec-color-yellow);
+}
+
+/* MOBILE NAV */
+.mobile__nav-link:hover,
+.holder__name:hover {
+    color: var(--sec-color-yellow);
+}
+
+
+.mobile__dropdown-link:hover {
+    color: var(--sec-color-yellow);
 }
 
 /* HERO SECTION */
@@ -305,6 +320,11 @@
     align-self: flex-end;
 }
 
+.showcase__header a:hover {
+    color: var(--sec-color-yellow);
+    border-bottom: 2px solid var(--sec-color-yellow);
+}
+
 /* BEST SELLER */
 .bestseller {
     display: grid;
@@ -411,7 +431,7 @@
     border-radius: 0.4rem;
     display: inline-flex;
     padding: 0.25rem;
-    z-index: var(--z-tooltip);
+    z-index: 1000;
     opacity: 0.8;
     transition: 0.5s;
 }
@@ -485,6 +505,12 @@
         justify-content: space-between;
         gap: 1rem;
     }
+
+    /* NEWSFEED */
+    .news_feed-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -508,6 +534,17 @@
     .hero__title {
         font-size: 5rem;
         margin-bottom: 1.5rem;
+    }
+
+    /* NEWSFEED */
+    .news_feed-title {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .news_feed-info,
+    .newsfeed span {
+        font-size: 1.45rem;
     }
 }
 
