@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/utilities.css">
+        <link rel="stylesheet" href="styles/style.css"/>
+        <link rel="stylesheet" href="styles/music.css">
+        <link rel="stylesheet" href="styles/gadgets.css">
+        <title>E-Comrs</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header" id="header">
+            <!-- TOP NAV -->
+            <div class="top__nav">
+                <div class="slider top__nav">
+                        <i class="bx bxs-discount top__nav-icon"></i>
+                    <div>30% off storewide — Limited time!</div>
+                    <a href="shop.html" class="top__nav-link">Shop Now <i class="bx bx-right-arrow-alt"></i></a>
+                </div>
+            </div>
+
+            <!-- NAVBAR -->
+            <nav class="nav" id="nav">
+                <div class="container nav__container">
+                    <div class="nav__logo">
+                        <i class='bx bx-menu' id="toggle-icon"></i>
+                        <a href="index.html" class="logo"><i class='bx bxl-shopify'></i>
+                        <span class="logo__name">Rawfile</span></a>
+                    </div>
+
+                    <div class="nav__menu">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Home</a>
+                            </li>
+
+                            <li class="nav__item dropdown__menu">
+                                <div class="nav__link active-link">
+                                    Products <i class='bx bx-chevron-down dropdown__arrow'></i>
+
+                                    <div class="dropdown__data">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item"><a href="music.html" class="dropdown__link">Music</a></li>
+                                        </ul>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item"><a href="gadgets.html" class="dropdown__link">Gadgets</a></li>
+                                        </ul>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item"><a href="clothing.html" class="dropdown__link">Clothing</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav__item">
+                                <a href="shop.html" class="nav__link">Shop</a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a href="contact.html" class="nav__link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="nav__icon">
+                        <div class="search__box" id="search-box">
+                            <i class='bx bx-search' id="search-icon"></i>
+                            <div class="input__box">
+                                <input type="text" placeholder="Search...">
+                            </div>
+                        </div>
+                        <i class='bx bx-user-circle' id="user-icon"></i>
+                        <i class='bx bx-cart-alt' id="cart-icon"></i>
+                        <span class="cart__count">0</span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- MOBILE NAV -->
+        <nav class="mobile__nav container" id="mobile-nav">
+            <div class="mobile__container">
+                <div class="mobile__nav-logo">
+                    <a href="index.html" class="mobile__logo"><i class='bx bxl-shopify'></i>
+                    <span class="logo__name">Rawfile</span></a>
+
+                    <div class="mobile__close" id="mobile-close">
+                        <i class="bx bx-x"></i>
+                    </div>
+                </div>
+
+                <div class="mobile__nav-menu">
+                    <ul class="mobile__nav-list">
+                        <li class="mobile__nav-item">
+                            <a href="index.html" class="mobile__nav-link mobile__active-link">Home</a>
+                        </li>
+
+                        <li class="mobile__nav-item mobile__dropdown-menu">
+                            <div class="mobile__nav-link prod">
+                                Products <i class='bx bx-chevron-down mobile__dropdown-arrow'></i>
+
+                                <div class="mobile__dropdown-data">
+                                    <ul class="mobile__dropdown-list">
+                                        <li class="mobile__dropdown-item"><a href="music.html" class="mobile__dropdown-link">Music</a></li>
+                                    </ul>
+                                    <ul class="mobile__dropdown-list">
+                                        <li class="mobile__dropdown-item"><a href="gadgets.html" class="mobile__dropdown-link">Gadgets</a></li>
+                                    </ul>
+                                    <ul class="mobile__dropdown-list">
+                                        <li class="mobile__dropdown-item"><a href="clothing.html" class="mobile__dropdown-link">Clothing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="mobile__nav-item">
+                            <a href="index.html" class="mobile__nav-link">Shop</a>
+                        </li>
+
+                        <li class="mobile__nav-item">
+                            <a href="index.html" class="mobile__nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mobile__user-icons">
+                <div class="mobile__user-holder">
+                    <div class="holder__name">
+                        Wishlist
+                    </div>
+                    <a href="#" class="mobile__user-btns" id="signin__open"><i class='bx bx-heart'></i>
+                    <span class="count">2</span></a>
+                </div>
+                <div class="mobile__user-holder">
+                    <div class="holder__name">
+                        Cart
+                    </div>
+                    <a href="#" class="mobile__user-btns" id="cart__open" ><i class='bx bx-cart'></i>
+                        <span class="count">2</span>
+                    </a>
+                    </div>
+                    <div class="mobile__btn">
+                        <button class="btn">Add to Cart</button>
+                    </div>
+
+                <div class="mobile__socials">
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-youtube'></i>
+                </div>
+            </div>    
+        </nav>
+
+        <!-- LOGIN -->
+        <div class="signin" id="signin">
+            <div class="signin__icon">
+                <i class="bx bx-x signin__close" id="signin-close"></i>
+            </div>
+
+            <h2 class="signin__title">Sign In</h2>
+            <div class="signup">Don't have an account yet? <a href="signup.html">Sign Up</a></div>
+
+        <form action="" class="signin__form">
+            <div class="signin__content">
+                <label for="email" class="signin__label"></label>
+                <input type="text" placeholder="Your username or email address" class="signin__input" id="email">
+            </div>
+
+            <div class="signin__content">
+                <label for="password"  class="signin__label">
+                </label>
+                <input type="password" placeholder="Password" class="signin__input" id="password">
+            </div>
+            
+            <div class="signin__contents">
+                <div class="remember__me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe" class="signin__label">Remember Me</label>
+                </div>
+                <a href="#" class="signin__label signin__label-password">Forgot Password?</a>
+            </div>
+            <button class="signin__btn">Sign In</button>
+        </form>
+        </div>
+
+        <!-- CART -->
+        <div class="cart" id="cart">
+                <div class="cart__icon" id="cart-close">
+                    <i class="bx bx-x cart__close" id="cart-close"></i>
+                </div> 
+
+                <h1 class="cart__title">Cart</h2>
+                        
+                <div class="cart__container">
+                    <!-- CART ITEMS -->
+                    <div class="cart__items">
+                        <!-- Cart 1 -->
+                        <div class="cart__content">
+                            <div class="cart__img">
+                                <img src="./assets/img/cart-1.png" alt="Black Tray Table">
+                            </div>
+                            <div class="cart__label">
+                                <div class="label__holder">
+                                    <h3 class="label__title">Tray Table </h3>
+                                    <div class="label__amount">$19.19</div>
+                                </div>
+                                <div class="label__holder">
+                                    <div class="label__discription">Color: Black</div>
+                                    <i class='bx bx-trash-alt label__delete'></i>
+                                </div>
+                                <div class="label__count">
+                                    <i class='bx bx-minus' id="minus"></i>
+                                    <div class="label__count-num" id="count">2</div>
+                                    <i class='bx bx-plus' id="plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart 2 -->
+                        <div class="cart__content">
+                            <div class="cart__img">
+                                <img src="./assets/img/cart-2.png" alt="Black Tray Table">
+                            </div>
+                            <div class="cart__label">
+                                <div class="label__holder">
+                                    <h3 class="label__title">Tray Table </h3>
+                                    <div class="label__amount">$19.19</div>
+                                </div>
+                                <div class="label__holder">
+                                    <div class="label__discription">Color: Black</div>
+                                    <i class='bx bx-trash-alt label__delete'></i>
+                                </div>
+                                <div class="label__count">
+                                    <i class='bx bx-minus' id="minus"></i>
+                                    <div class="label__count-num" id="count">2</div>
+                                    <i class='bx bx-plus' id="plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart 3 -->
+                        <div class="cart__content">
+                            <div class="cart__img">
+                                <img src="./assets/img/cart-3.png" alt="Black Tray Table">
+                            </div>
+                            <div class="cart__label">
+                                <div class="label__holder">
+                                    <h3 class="label__title">Tray Table </h3>
+                                    <div class="label__amount">$19.19</div>
+                                </div>
+                                <div class="label__holder">
+                                    <div class="label__discription">Color: Black</div>
+                                    <i class='bx bx-trash-alt label__delete'></i>
+                                </div>
+                                <div class="label__count">
+                                    <i class='bx bx-minus' id="minus"></i>
+                                    <div class="label__count-num" id="count">2</div>
+                                    <i class='bx bx-plus' id="plus"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CART FOOTER -->
+                    <div class="cart__footer">
+                        <div class="footer__total">
+                            <div class="total__holder">
+                                <div class="label__discription subtotal">Subtotal</div>
+                                <div class="subtotal__amount">$122.19</div>
+                            </div>
+
+                            <div class="total__holder">
+                                <h3 class="total__title">Total Amount</h3>
+                                <div class="total__amount">$179.19</div>
+                            </div>
+
+                            <button class="checkout__btn">
+                                <a href="checkout.html">Checkout</a>
+                            </button>
+                            <a href="cart.html" class="view__cart-link">View Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero__text">
+                    <h1 class="hero__title">More than <br>just a game. <br>It’s a lifestyle.</h1>
+                    <p class="hero__info">Whether you’re just starting out, have played <br>your whole life or you're a Tour pro, <br>your swing is like a fingerprint.</p>
+                    <button class="hero_btn">Shopping Now</button>
+                </div>
+                <div class="hero__img">
+                    <img src="./assets/img/hero-img-2.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED -->
+        <section class="featured new_arrivals">
+            <div class="container new_arrivals-container">
+                <div class="new_arrivals-header">
+                    <h3 class="new_arrivals-title">Featured</h3>
+                </div>
+
+                <div class="swiper mySwiper arrival_products">
+                    <div class="swiper-wrapper">
+                        <!-- Item 1 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card_top">
+                                    <img src="./assets/img/featured-1.png" class="card_img" alt="">
+                                    <div class="card_tag-new">New</div>
+                                    <div class="card_top_icon"><i class='bx bx-heart'></i></div>
+                                    <button class="card_btn">Add to cart</button>
+                                </div>
+
+                                <div class="card_body">
+                                    <div class="card_stars">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                    <h3 class="card_title">Shark - Men's cabretta white golf <br> glove </h3>
+                                    <p class="card_price">$19.99</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card_top">
+                                    <img src="./assets/img/featured-2.png" class="card_img" alt="">
+                                    <div class="card_tag-new">New</div>
+                                    <div class="card_top_icon"><i class='bx bx-heart'></i></div>
+                                    <button class="card_btn">Add to cart</button>
+                                </div>
+
+                                <div class="card_body">
+                                    <div class="card_stars">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                    <h3 class="card_title">Greg Norman - Men's Shark Logo <br>Golf Polo Shirt</h3>
+                                    <p class="card_price">$49.99</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card_top">
+                                    <img src="./assets/img/featured-3.png" class="card_img" alt="">
+                                    <div class="card_tag-new">New</div>
+                                    <div class="card_top_icon"><i class='bx bx-heart'></i></div>
+                                    <button class="card_btn">Add to cart</button>
+                                </div>
+
+                                <div class="card_body">
+                                    <div class="card_stars">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                    <h3 class="card_title">G/FORE - Mens Left Glove Snow <br>2023</h3>
+                                    <p class="card_price">$149.99</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card_top">
+                                    <img src="./assets/img/featured-4.png" class="card_img" alt="">
+                                    <div class="card_tag-new">New</div>
+                                    <div class="card_top_icon"><i class='bx bx-heart'></i></div>
+                                    <button class="card_btn">Add to cart</button>
+                                </div>
+
+                                <div class="card_body">
+                                    <div class="card_stars">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                    <h3 class="card_title">Utility Rover-R Double Strap Bag<br> All Black - 2023</h3>
+                                    <p class="card_price">$209.99</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card_top">
+                                    <img src="./assets/img/featured-8.png" class="card_img" alt="">
+                                    <div class="card_tag-new">New</div>
+                                    <div class="card_top_icon"><i class='bx bx-heart'></i></div>
+                                    <button class="card_btn">Add to cart</button>
+                                </div>
+
+                                <div class="card_body">
+                                    <div class="card_stars">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                    <h3 class="card_title">Beats <br>Studio Pro</h3>
+                                    <p class="card_price">$224.99</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card_top">
+                                    <img src="./assets/img/featured-9.png" class="card_img" alt="">
+                                    <div class="card_tag-new">New</div>
+                                    <div class="card_top_icon"><i class='bx bx-heart'></i></div>
+                                    <button class="card_btn">Add to cart</button>
+                                </div>
+
+                                <div class="card_body">
+                                    <div class="card_stars">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                    <h3 class="card_title">JBL Reflect Flow Pro+ Bluetooth <br>Truly Wireless Sports</h3>
+                                    <p class="card_price">$179.95</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 7 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card_top">
+                                    <img src="./assets/img/featured-7.png" class="card_img" alt="">
+                                    <div class="card_tag-new">New</div>
+                                    <div class="card_top_icon"><i class='bx bx-heart'></i></div>
+                                    <button class="card_btn">Add to cart</button>
+                                </div>
+
+                                <div class="card_body">
+                                    <div class="card_stars">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                    <h3 class="card_title">Bose <br>QuietComfort Headphones</h3>
+                                    <p class="card_price">$349.00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOP BY CATEGORIES -->
+        <section class="shop_by_categories new_arrivals">
+            <div class="container new_arrivals-container">
+                <div class="new_arrivals-header">
+                    <h3 class="new_arrivals-title">Shop By Categories</h3>
+                </div>
+                
+                <div class="bestseller swiper">
+                    <!-- Item 1 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card_top">
+                                <img src="./assets/img/shop-by-categories-1.png" class="card_img" alt="">
+                
+                            </div>
+
+                            <div class="card_body">
+                                <h3 class="card_title">Golf Clubs</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card_top">
+                                <img src="./assets/img/shop-by-categories-2.png" class="card_img" alt="">
+                
+                            </div>
+
+                            <div class="card_body">
+                                <h3 class="card_title">Golf Balls</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card_top">
+                                <img src="./assets/img/shop-by-categories-3.png" class="card_img" alt="">
+                
+                            </div>
+
+                            <div class="card_body">
+                                <h3 class="card_title">Golf Bags</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card_top">
+                                <img src="./assets/img/shop-by-categories-4.png" class="card_img" alt="">
+                
+                            </div>
+
+                            <div class="card_body">
+                                <h3 class="card_title">Clothing & Rainwear</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card_top">
+                                <img src="./assets/img/shop-by-categories-5.png" class="card_img" alt="">
+                
+                            </div>
+
+                            <div class="card_body">
+                                <h3 class="card_title">Footwear</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card_top">
+                                <img src="./assets/img/shop-by-categories-6.png" class="card_img" alt="">
+                
+                            </div>
+
+                            <div class="card_body">
+                                <h3 class="card_title">Accessories</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADS SECTION -->
+        <section class="ads">
+            <div class="ads__container">
+                <img src="./assets/img/home-page03-1.png" class="ads__img" alt="">
+
+                <div class="ads__content">
+                    <h3 class="ads__subheading">LMITED EDITION</h3>
+                    <h2 class="ads__title">Hurry up! 30% OFF</h2>
+                    <p class="ads__info">Find clubs that are right for your game</p>
+                    <div class="counter">
+                        <p class="counter_info">Offer expires in:</p>
+                        <div class="counter_cards">
+                            <!-- Card 1 -->
+                            <div class="counter_card">
+                                <h3 class="counter_num days">02</h3>
+                                <p class="counter_details">Days</p>
+                            </div>
+
+                            <!-- Card 1 -->
+                            <div class="counter_card">
+                                <h3 class="counter_num hours">02</h3>
+                                <p class="counter_details">Hours</p>
+                            </div>
+
+                            <!-- Card 1 -->
+                            <div class="counter_card">
+                                <h3 class="counter_num minutes">02</h3>
+                                <p class="counter_details">Minutes</p>
+                            </div>
+
+                            <!-- Card 1 -->
+                            <div class="counter_card">
+                                <h3 class="counter_num seconds">02</h3>
+                                <p class="counter_details">Seconds</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="ads_btn">Shop Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOWCASE SECTION -->
+        <section class="showcase">
+            <div class="container">
+            <div class="new_arrivals-header">
+                <h3 class="new_arrivals-title">Shop Collection</h3>
+            </div>
+            <div class="showcase__container grid">
+                <!-- Item 1 -->
+                <div class="item-1">
+                    <div class="showcase__img-container">
+                        <img src="./assets/img/shop-collection-1.png" class="showcase__img item__1-img"  alt="Chair">
+                    </div>
+                    <div class="showcase__header">
+                        <h3 class="showcase__title">Headband</h3>
+                        <a href="shop.html" class="top__nav-link">Collection <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>    
+                </div>
+
+                <!-- Item 2 -->
+                <div class="showcase__items item-2">
+                    <div class="showcase__header">
+                        <h3 class="showcase__title">Earbuds</h3>
+                        <a href="shop.html" class="top__nav-link links">Collection <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                    <div class="showcase__img-container">
+                        <img src="./assets/img/shop-collection-2.png" class="showcase__img kitchen"  alt="Chair">
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="showcase__items item-3">
+                    <div class="showcase__header">
+                        <h3 class="showcase__title">Accessories</h3>
+                        <a href="shop.html" class="top__nav-link links">Collection <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                    <div class="showcase__img-container">
+                        <img src="./assets/img/shop-collection-3.png" class="showcase__img kitchen"  alt="Chair">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- ARTICLES SECTION -->
+        <section class="articles">
+            <div class="container articles__container">
+                <div class="new__articles-header">
+                    <h2 class="new__articles-title">Articles</h2>
+
+                    <a href="shop.html" class="linked">Shop Now <i class="bx bx-right-arrow-alt"></i></a>
+                </div>
+
+                <!-- ARTICLES 1 -->
+                <div class="article__container">
+                    <!-- Article 1 -->
+                    <div class="article__content">
+                        <img src="./assets/img/latest-articles-1.png" alt="">
+                        <div class="article__info">Air Jordan x Travis Scott Event</div>
+
+                        <a href="blog.html" class="linked">Read More <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                    <!-- Article 2 -->
+                    <div class="article__content">
+                        <img src="./assets/img/latest-articles-2.png" alt="">
+                        <div class="article__info">The timeless classics on the green</div>
+
+                        <a href="blog.html" class="linked">Read More <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                    <!-- Article 3 -->
+                    <div class="article__content">
+                        <img src="./assets/img/latest-articles-3.png" alt="">
+                        <div class="article__info">The 2023 Ryder Cup</div>
+
+                        <a href="blog.html" class="linked">Read More <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JOIN OUR NEWSLETTER -->
+        <section class="newsletter">
+            <div class="footer__container">
+                <div class="footer__top">
+                    <img src="./assets/img/footer-image-6.png" alt="">
+                    <div class="footer__top-content">
+                        <h3 class="top__content-title">Join Our Newsletter</h3>
+                        <p class="top__content-info">Sign up for deals, new products and promotions </p>
+
+                        <div class="footer__form">
+                            <form action="">
+                                <div class="mail">
+                                    <i class='bx bx-envelope'></i>
+                                    <input type="Email" id="email"  placeholder="Email address">
+                                </div>
+                                
+                                <span>Signup</span>
+                            </form>
+                        </div>
+                    </div>
+                    <img src="./assets/img/footer-image-5.png" alt="">
+                </div>
+        </section>
+
+        <!-- NEWS FEED -->
+        <section class="news_feed">
+            <div class="container news_feed-container">
+                <div class="newsfeed">
+                    <h4 class="news_feed-header">NEWSFEED</h4>
+                    <h2 class="news_feed-title">Instagram</h2>
+                    <p class="news_feed-info">Follow us on social media for more discount & promotions</p>
+                    <span>@rawfile.webdev</span>
+                </div>
+
+                <div class="newsfeed_image-container">
+                    <img src="./assets/img/news-feed-6.png" alt="">
+                    <img src="./assets/img/news-feed-7.png" alt="">
+                    <img src="./assets/img/news-feed-8.png" alt="">
+                    <img src="./assets/img/news-feed-9.png" alt="">
+                    <img src="./assets/img/news-feed-10.png" alt="">
+                    <img src="./assets/img/news-feed-11.png" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+                <div class="footer__down">
+                    <div class="container">
+                        <div class="footer__content">
+                            <div class="footer__logo">
+                            <!--Nav Logo -->
+                                <div class="logo__img">
+                                    <a href="index.html" class="logo__link" ><i class='bx bxl-shopify'></i><span>Rawfile</span></a>
+                                </div>
+                                <p class="logo__info">Gift & Decoration Store</p>
+                            </div>
+
+                            <div class="footer__links">
+                                <div class="links"><a href="home.html">Home</a></div>
+                                <div class="links"><a href="shop.html">Shop</a></div>
+                                <div class="links"><a href="product.html">Product</a></div>
+                                <div class="links"><a href="blog.html">Blog</a></div>
+                                <div class="links"><a href="contact.html">Contact Us</a></div>
+                            </div>
+                        </div>
+
+                        <div class="footer__socials">
+                            <div class="footer__copy">
+                                <p class="copy">&#169; Codebyrawfile. All rights reserved</p>
+                                <a href="privacy.html">Privacy Policy</a>
+                                <a href="terms.html">Terms of Use</a>
+                            </div>
+                            
+                            <div class="social__icons">
+                                <a href="#"><i class='bx bxl-instagram'></i></a>
+                                <a href="#"><i class='bx bxl-facebook'></i></a>
+                                <a href="#"><i class='bx bxl-youtube'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- SCROLL UP -->
+        <a href="#" class="scrollup" id="scroll-up"><i class="bx bx-up-arrow-alt scrollup__icon"></i></a>
+
+        <!-- Swiper JS -->
+        <script src="./js/swiper-bundle.min.js"></script>
+        <!-- JS -->
+        <script type="module" src="./js/main.js"></script>
+    </body>

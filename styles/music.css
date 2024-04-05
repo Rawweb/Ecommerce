@@ -65,6 +65,28 @@
     padding-bottom: 2rem;
 }
 
+.nav__link:hover {
+    color: var(--background-color);
+    cursor: pointer;
+}
+
+
+.active-link {
+    color: var(--background-color);
+    position: relative;
+    font-weight: 600;
+}
+.active-link:before {
+    content: "";
+    position: absolute;
+    bottom: -0.65rem;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--background-color);
+    border-radius: 50%;
+}
+
 /* SEARCH BOX NAV */
 .nav__icon .search__box .input__box {
     background-color: var(--sec-color-yellow);
@@ -262,7 +284,7 @@
     font-size: 1.4rem;
 }
 
-/* COLLECTION SECTIOBN */
+/* COLLECTION SECTION */
 .showcase {
     margin-bottom: 6rem;
 }
@@ -297,7 +319,7 @@
 }
 
 .counter_cards {
-    margin: 1rem 0;
+    margin: 2rem 0;
     display: flex;
     gap: 3rem;
 }
