@@ -352,14 +352,11 @@
 
 .social__icons a {
     opacity: .7;
+    transition: 0.5s;
 }
 
 .social__icons a:hover {
     opacity: 1;
-}
-
-.social__icons a {
-    transition: 0.5s;
 }
 
 .footer_img img {
